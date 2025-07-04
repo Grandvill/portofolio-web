@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -7,9 +9,9 @@ function App() {
   useEffect(() => {});
 
   return (
-    <div>
-      <p>tes</p>
-    </div>
+    <AnimatePresence>
+      <Header isDark={isDark} toggleTheme={() => setIsDark(!isDark)} />
+    </AnimatePresence>
   );
 }
 
