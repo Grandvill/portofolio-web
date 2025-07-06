@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
-  const [isLoading, setIsloading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
