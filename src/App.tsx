@@ -63,32 +63,34 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`} />
-      <div className="bg-white dark:bg-gray-800 text-black dark:text-white" />
-      <Header isDark={isDark} toggleTheme={toggleTheme} />
+      <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
+          <Header isDark={isDark} toggleTheme={toggleTheme} />
 
-      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </motion.main>
+          <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </motion.main>
 
-      <Footer />
+          <Footer />
 
-      {/* Floating Action Button */}
-      <motion.button
-        className="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-40"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-      >
-        <span className="text-2xl">🚀</span>
-      </motion.button>
+          {/* Floating Action Button */}
+          <motion.button
+            className="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-40"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            <span className="text-2xl">🚀</span>
+          </motion.button>
+        </div>
+      </div>
     </AnimatePresence>
   );
 }
