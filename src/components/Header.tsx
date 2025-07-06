@@ -37,6 +37,22 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             <span className="text-primary-500">Z</span>
             <span className="text-accent-500">A</span>
             <span className="text-neon-500">H</span>
+            <span className="text-primary-500">I</span>
+            <span className="text-accent-500">D</span>
+            <span className="text-neon-500">A</span>
+            <span className="text-primary-500 mr-2">N</span>
+
+            <span className="text-accent-500">A</span>
+            <span className="text-neon-500">R</span>
+            <span className="text-primary-500">D</span>
+            <span className="text-accent-500">H</span>
+            <span className="text-neon-500">I</span>
+            <span className="text-primary-500">A</span>
+            <span className="text-accent-500">N</span>
+            <span className="text-neon-500">S</span>
+            <span className="text-primary-500">Y</span>
+            <span className="text-accent-500">A</span>
+            <span className="text-neon-500">H</span>
           </motion.div>
 
           {/* Desktop Navigation */}
