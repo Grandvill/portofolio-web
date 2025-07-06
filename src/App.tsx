@@ -12,13 +12,37 @@ function App() {
   const [isDark, setIsDark] = useState(false);
   const [isLoading, setIsloading] = useState(true);
 
+  useEffect(() => {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+
+    // Simulate loading
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    if (!isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
   useEffect(() => {});
 
   return (
     <AnimatePresence>
       <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`} />
       <div className="bg-white dark:bg-gray-800 text-black dark:text-white" />
-      <Header isDark={isDark} toggleTheme={() => setIsDark(!isDark)} />
+      <Header isDark={isDark} toggleTheme={toggleTheme} />
 
       <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <Hero />
