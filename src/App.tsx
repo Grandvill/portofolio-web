@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </motion.main>
     </AnimatePresence>
   );
