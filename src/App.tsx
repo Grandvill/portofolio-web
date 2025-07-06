@@ -36,7 +36,30 @@ function App() {
     }
   };
 
-  useEffect(() => {});
+  // Loading screen
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-primary-400 flex items-center justify-center">
+        <motion.div className="text-center" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+          <motion.div
+            className="w-32 h-32 bg-black border-4 border-white shadow-brutal-xl mx-auto mb-8 flex items-center justify-center"
+            animate={{ rotate: [0, 90, 180, 270, 360] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+          >
+            <span className="text-4xl text-white">💻</span>
+          </motion.div>
+
+          <motion.h1 className="text-4xl font-black text-black mb-4" animate={{ y: [0, -10, 0] }} transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}>
+            Loading Portfolio...
+          </motion.h1>
+
+          <motion.div className="w-64 h-2 bg-black border-2 border-white mx-auto overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+            <motion.div className="h-full bg-white" initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 1.5, ease: 'easeInOut' }} />
+          </motion.div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <AnimatePresence>
