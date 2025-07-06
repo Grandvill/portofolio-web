@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import Hero from './components/Hero';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -10,7 +11,13 @@ function App() {
 
   return (
     <AnimatePresence>
+      <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`} />
+      <div className="bg-white dark:bg-gray-800 text-black dark:text-white" />
       <Header isDark={isDark} toggleTheme={() => setIsDark(!isDark)} />
+
+      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <Hero />
+      </motion.main>
     </AnimatePresence>
   );
 }
