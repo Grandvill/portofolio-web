@@ -20,7 +20,7 @@ export default function Certificates() {
       skills: ['HTML', 'CSS', 'JavaScript', 'React.JS', 'Next.JS', 'Golang'],
       color: 'bg-primary-400',
       borderColor: 'border-primary-600',
-      image: 'https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/certificates/dicoding_zahidan.png',
     },
     {
       title: 'Certificate of Competence',
@@ -30,7 +30,7 @@ export default function Certificates() {
       skills: ['Web Development', 'Programming', 'Software Development', 'Junior Web Developer'],
       color: 'bg-accent-400',
       borderColor: 'border-accent-600',
-      image: 'https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/certificates/bisnis_zahidan.png',
     },
     {
       title: 'TOEIC Certificate',
