@@ -92,8 +92,8 @@ export default function Hero() {
             <motion.div className="relative" animate={{ y: [0, -10, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}>
               <div className="w-80 h-80 bg-gradient-to-br from-primary-400 to-accent-500 border-4 border-black shadow-brutal-xl transform rotate-3 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-primary-300 to-pink-300 flex items-center justify-center">
-                  <motion.div className="text-8xl" animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
-                    👨‍💻
+                  <motion.div className="text-8xl">
+                    <img src="/images/my_photo2.jpeg" alt="Avatar" />
                   </motion.div>
                 </div>
               </div>
