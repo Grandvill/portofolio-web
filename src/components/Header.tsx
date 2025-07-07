@@ -11,7 +11,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const navItems = ['About', 'Skills', 'Projects', 'Contact'];
+  const navItems = ['About', 'Skills', 'Projects', 'Certificates', 'Contact'];
 
   useEffect(() => {
     const handleScroll = () => {
