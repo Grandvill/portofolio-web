@@ -93,7 +93,7 @@ export default function Hero() {
               <div className="w-80 h-80 bg-gradient-to-br from-primary-400 to-accent-500 border-4 border-black shadow-brutal-xl transform rotate-3 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-primary-300 to-pink-300 flex items-center justify-center">
                   <motion.div className="text-8xl">
-                    <img src="/images/my_photo2.jpeg" alt="Avatar" />
+                    <img src="/images/my_photo2.jpeg" alt="Avatar" className="w-full h-full object-cover shadow-lg object-[center_-80px]" />
                   </motion.div>
                 </div>
               </div>
