@@ -43,14 +43,15 @@ export default function About() {
           <motion.div ref={ref} className="space-y-8" initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}>
             <div>
               <motion.h2 className="text-4xl sm:text-5xl font-black mb-6" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
-                About <span className="text-primary-500">The</span> <span className="text-accent-500">Developer</span>
+                About <span className="text-accent-500">Me</span>
               </motion.h2>
 
               <motion.div className="w-24 h-1 bg-neon-400 mb-8" initial={{ width: 0 }} animate={inView ? { width: 96 } : {}} transition={{ duration: 0.8, delay: 0.4 }} />
 
               <motion.div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
                 <p>
-                  Hi there! I'm <strong className="text-primary-500">Zahidan Ardhiansyah</strong>, a passionate Frontend Developer and UI/UX Designer with over 2 years of experience crafting digital experiences that make a difference.
+                  Hi there! I'm <strong className="text-primary-500">Zahidan Ardhiansyah</strong>, a passionate Full Stack Developer with a Bachelor's degree in Computer Science. Based in Indonesia, I am highly motivated to gain practical
+                  experience in web development and contribute to projects that enhance my technical and professional skills.
                 </p>
 
                 <p>
@@ -58,13 +59,13 @@ export default function About() {
                   it evolved into a passion for creating seamless, beautiful, and functional web applications.
                 </p>
 
-                <p>When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects, or learning the latest in web development. I believe in continuous learning and always staying ahead of the curve.</p>
+                <p>When I'm not coding, you'll find me exploring the latest web development trends or diving into new technologies. I'm passionate about continuous learning and staying ahead of the curve.</p>
               </motion.div>
             </div>
 
             <motion.div className="flex flex-wrap gap-4" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.7 }}>
-              <div className="px-4 py-2 bg-primary-100 text-primary-800 font-mono font-bold border-2 border-primary-800">🎓 Bachelor's in Information Technology</div>
-              <div className="px-4 py-2 bg-accent-100 text-accent-800 font-mono font-bold border-2 border-accent-800">📍 Based in Indonesia</div>
+              <div className="px-4 py-2 bg-primary-100 text-primary-800 font-mono font-bold border-2 border-primary-800">🎓 Bachelor's in Computer Science</div>
+              <div className="px-4 py-2 bg-accent-100 text-accent-800 font-mono font-bold border-2 border-accent-800">📍 Bekasi City, West Java, Indonesia</div>
               <div className="px-4 py-2 bg-neon-100 text-neon-800 font-mono font-bold border-2 border-neon-800">💼 Available for Work</div>
             </motion.div>
           </motion.div>
