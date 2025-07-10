@@ -5,7 +5,7 @@ export default function Hero() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Grandvill', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/zahidan-ardhiansyah/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:zahidanardhiansyah@gmail.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:zahidan23@gmail.com', label: 'Email' },
   ];
 
   const scrollToProjects = () => {
@@ -23,7 +23,7 @@ export default function Hero() {
           <motion.div className="space-y-8" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
             <div className="space-y-4">
               <motion.div className="inline-block px-4 py-2 bg-neon-400 text-black font-mono font-bold border-2 border-black shadow-brutal" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-                FRONTEND ENGINEER • UI/UX DESIGNER
+                FULL STACK DEVELOPER
               </motion.div>
 
               <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
@@ -39,10 +39,10 @@ export default function Hero() {
               <motion.div className="flex flex-wrap gap-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <motion.span className="flex items-center gap-2 font-mono text-sm" whileHover={{ scale: 1.05 }}>
                   <Mail size={16} />
-                  zahidanardhiansyah@gmail.com
+                  zahidan23@gmail.com
                 </motion.span>
                 <motion.span className="flex items-center gap-2 font-mono text-sm" whileHover={{ scale: 1.05 }}>
-                  📍 Indonesia
+                  📍 Bekasi City, West Java, Indonesia
                 </motion.span>
               </motion.div>
             </div>
