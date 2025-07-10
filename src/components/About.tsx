@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Palette, Users, Zap } from 'lucide-react';
+import { Brain, Code, Palette, Users, Zap } from 'lucide-react';
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -16,9 +16,9 @@ export default function About() {
       color: 'bg-primary-400',
     },
     {
-      icon: Palette,
-      title: 'UI/UX Design',
-      description: 'Creating beautiful, intuitive interfaces that users love to interact with.',
+      icon: Brain,
+      title: 'Problem Solving',
+      description: 'Applying critical thinking to overcome challenges and find effective solutions.',
       color: 'bg-accent-400',
     },
     {
