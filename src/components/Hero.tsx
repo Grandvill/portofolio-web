@@ -27,13 +27,13 @@ export default function Hero() {
               </motion.div>
 
               <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-                The One Who <span className="text-primary-500 inline-block animate-wiggle">Codes,</span>
+                Hello I'm
                 <br />
-                <span className="text-accent-500">Creates,</span> <span className="text-neon-500">And Conquers.</span>
+                <span className="text-accent-500">Zahidan</span> <span className="text-neon-500">Ardhiansyah</span>
               </motion.h1>
 
               <motion.p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-                Frontend Developer & UI/UX Designer crafting sleek, functional experiences. Passionate about clean code, bold design, and exploring the fun side of tech. I don't just follow the future—I help shape it.
+                I am a passionate Full Stack Developer with a focus on building modern web applications. I love creating intuitive user experiences and scalable backend systems.
               </motion.p>
 
               <motion.div className="flex flex-wrap gap-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
