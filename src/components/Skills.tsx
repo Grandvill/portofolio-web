@@ -135,7 +135,7 @@ export default function Skills() {
       <div className="container mx-auto">
         <motion.div ref={ref} className="text-center mb-16" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <motion.h2 className="text-4xl sm:text-5xl font-black mb-4" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
-            My <span className="text-primary-500">Tech</span> <span className="text-accent-500">Arsenal</span>
+            <span className="text-accent-500">Skills</span>
           </motion.h2>
           <motion.div className="w-24 h-1 bg-neon-400 mx-auto" initial={{ width: 0 }} animate={inView ? { width: 96 } : {}} transition={{ duration: 0.8, delay: 0.4 }} />
         </motion.div>
