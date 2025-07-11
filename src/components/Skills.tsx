@@ -140,7 +140,7 @@ export default function Skills() {
           <motion.div className="w-24 h-1 bg-neon-400 mx-auto" initial={{ width: 0 }} animate={inView ? { width: 96 } : {}} transition={{ duration: 0.8, delay: 0.4 }} />
         </motion.div>
 
-        <motion.div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-6" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }}>
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -169,12 +169,12 @@ export default function Skills() {
 
                 {/* Tooltip */}
                 <motion.div
-                  className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-1 rounded font-mono text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  className="absolute -top-2 -right-2 transform translate-x-1/2 -translate-y-full bg-black text-white px-3 py-1 rounded font-mono text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
                   initial={{ y: 10 }}
                   whileHover={{ y: 0 }}
                 >
                   {skill.name}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full border-4 border-transparent border-b-black"></div>
+                  <div className="absolute bottom-0 left-0 transform -translate-x-1 translate-y-1 border-4 border-transparent border-t-black border-r-black"></div>
                 </motion.div>
               </div>
             </motion.div>
