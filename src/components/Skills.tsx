@@ -11,7 +11,7 @@ export default function Skills() {
     {
       name: 'React.js',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-      color: 'bg-cyan-400',
+      color: 'bg-cyan-600',
     },
     {
       name: 'Next.js',
@@ -24,19 +24,49 @@ export default function Skills() {
       color: 'bg-blue-500',
     },
     {
-      name: 'Node.js',
+      name: 'Node js',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
       color: 'bg-green-500',
     },
     {
-      name: 'Tailwind CSS',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
-      color: 'bg-teal-400',
+      name: 'Express js',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg',
+      color: 'bg-gray-600',
+    },
+    {
+      name: 'Hapi js',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hapi/hapi-original.svg',
+      color: 'bg-green-200',
+    },
+    {
+      name: 'AJAX',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ajax/ajax-original.svg',
+      color: 'bg-blue-300',
+    },
+    {
+      name: 'JQuery',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
+      color: 'bg-blue-400',
     },
     {
       name: 'JavaScript',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
       color: 'bg-yellow-400',
+    },
+    {
+      name: 'PHP',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
+      color: 'bg-purple-400',
+    },
+    {
+      name: 'Laravel',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
+      color: 'bg-red-800',
+    },
+    {
+      name: 'CodeIgniter',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/codeigniter/codeigniter-original.svg',
+      color: 'bg-red-400',
     },
     {
       name: 'HTML5',
@@ -49,14 +79,39 @@ export default function Skills() {
       color: 'bg-blue-400',
     },
     {
-      name: 'Git',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
-      color: 'bg-red-500',
+      name: 'Bootstrap',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+      color: 'bg-indigo-600',
     },
     {
-      name: 'Figma',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
-      color: 'bg-purple-500',
+      name: 'Tailwind CSS',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+      color: 'bg-teal-600',
+    },
+    {
+      name: 'Git',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+      color: 'bg-red-700',
+    },
+    {
+      name: 'Gitlab',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg',
+      color: 'bg-orange-400',
+    },
+    {
+      name: 'Github',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+      color: 'bg-gray-500',
+    },
+    {
+      name: 'Postman',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
+      color: 'bg-orange-500',
+    },
+    {
+      name: 'mySQL',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+      color: 'bg-blue-400',
     },
     {
       name: 'PostgreSQL',
@@ -66,7 +121,12 @@ export default function Skills() {
     {
       name: 'MongoDB',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
-      color: 'bg-green-600',
+      color: 'bg-green-800',
+    },
+    {
+      name: 'Supabase',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg',
+      color: 'bg-green-800',
     },
   ];
 
