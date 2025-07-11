@@ -35,12 +35,12 @@ export default function Skills() {
     },
     {
       name: 'Hapi js',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hapi/hapi-original.svg',
+      logo: 'images/skills/hapi.svg',
       color: 'bg-green-200',
     },
     {
       name: 'AJAX',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ajax/ajax-original.svg',
+      logo: 'images/skills/AJAX.svg',
       color: 'bg-blue-300',
     },
     {
@@ -65,8 +65,8 @@ export default function Skills() {
     },
     {
       name: 'CodeIgniter',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/codeigniter/codeigniter-original.svg',
-      color: 'bg-red-400',
+      logo: 'images/skills/codeigniter.svg',
+      color: 'bg-orange-400',
     },
     {
       name: 'HTML5',
