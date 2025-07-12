@@ -10,14 +10,14 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'Wild Oasis Resort',
+      title: 'Wild Oasis ',
       description: 'A comprehensive hotel management system with booking functionality, room management, and guest services. Built with React and modern web technologies.',
-      tech: ['React', 'JavaScript', 'CSS', 'API Integration'],
+      tech: ['React', 'React Query', 'JavaScript', 'CSS', 'Supabase'],
       liveUrl: 'https://wildoasisretreat.netlify.app/',
       githubUrl: 'https://github.com/Grandvill/the-wild-oasis',
       color: 'bg-primary-400',
-      featured: true,
-      image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800',
+      teamProject: false,
+      image: 'images/projects/wild-oasis.png',
       id: 'wild-oasis',
     },
     {
@@ -57,24 +57,22 @@ export default function Projects() {
       <div className="container mx-auto">
         <motion.div ref={ref} className="text-center mb-16" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <motion.h2 className="text-4xl sm:text-5xl font-black mb-4" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
-            My <span className="text-primary-500">Creative</span> <span className="text-accent-500">Projects</span>
+            <span className="text-accent-500">Projects</span>
           </motion.h2>
-          <motion.p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }}>
-            A collection of my favorite projects that showcase my skills in frontend development, UI/UX design, and problem-solving abilities.
-          </motion.p>
+
           <motion.div className="w-24 h-1 bg-neon-400 mx-auto mt-6" initial={{ width: 0 }} animate={inView ? { width: 96 } : {}} transition={{ duration: 0.8, delay: 0.4 }} />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div key={project.title} className={`group ${project.featured ? 'md:col-span-2' : ''}`} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 * index }}>
+            <motion.div key={project.title} className={`group ${project.teamProject ? 'md:col-span-2' : ''}`} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 * index }}>
               <div className="bg-white dark:bg-gray-800 border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-2 hover:translate-y-2 transition-all duration-300">
                 {/* Project Image */}
                 <div className="relative overflow-hidden border-b-4 border-black">
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 * index }}
@@ -93,15 +91,12 @@ export default function Projects() {
                   <div className="flex items-start justify-between">
                     <div>
                       <h3 className="text-2xl font-black text-black mb-2">{project.title}</h3>
-                      {project.featured && (
+                      {project.teamProject && (
                         <motion.span className="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
-                          FEATURED
+                          TEAM PROJECT
                         </motion.span>
                       )}
                     </div>
-                    <motion.div className="text-4xl" animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}>
-                      🎨
-                    </motion.div>
                   </div>
                 </div>
 
