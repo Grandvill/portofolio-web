@@ -180,28 +180,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Fun stats */}
-        <motion.div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.8 }}>
-          {[
-            { label: 'Years of Experience', value: '2+', icon: '🎯' },
-            { label: 'Projects Completed', value: '10+', icon: '🚀' },
-            { label: 'Technologies Mastered', value: '15+', icon: '⚡' },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              className="text-center p-6 bg-white dark:bg-gray-800 border-4 border-black shadow-brutal transform hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              whileHover={{ scale: 1.05, rotate: -1 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-            >
-              <div className="text-4xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-black text-primary-500 mb-2">{stat.value}</div>
-              <div className="font-mono font-bold text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
