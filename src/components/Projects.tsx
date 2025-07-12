@@ -33,7 +33,7 @@ export default function Projects() {
     {
       title: 'Big Forum 3.0',
       description: 'A modern discussion forum platform with real-time messaging, user authentication, and community features for enhanced user engagement.',
-      tech: ['React', 'Node.js', 'Database', 'Real-time'],
+      tech: ['Next.js', 'Node.js', 'Tailwind CSS'],
       liveUrl: '#',
       githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
       color: 'bg-neon-400',
@@ -72,7 +72,7 @@ export default function Projects() {
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 * index }}
