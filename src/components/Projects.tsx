@@ -72,7 +72,7 @@ export default function Projects() {
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-110"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 * index }}
