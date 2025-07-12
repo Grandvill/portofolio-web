@@ -17,6 +17,8 @@ export default function Projects() {
       githubUrl: 'https://github.com/Grandvill/the-wild-oasis',
       color: 'bg-primary-400',
       featured: true,
+      image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800',
+      id: 'wild-oasis',
     },
     {
       title: 'Movie Finder',
@@ -25,6 +27,8 @@ export default function Projects() {
       liveUrl: '#',
       githubUrl: 'https://github.com/Grandvill/movie-finder',
       color: 'bg-accent-400',
+      image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800',
+      id: 'movie-finder',
     },
     {
       title: 'Big Forum 3.0',
@@ -33,6 +37,8 @@ export default function Projects() {
       liveUrl: '#',
       githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
       color: 'bg-neon-400',
+      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      id: 'big-forum',
     },
     {
       title: 'Portfolio Website',
@@ -41,6 +47,8 @@ export default function Projects() {
       liveUrl: '#',
       githubUrl: '#',
       color: 'bg-purple-400',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      id: 'portfolio',
     },
   ];
 
@@ -61,6 +69,25 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div key={project.title} className={`group ${project.featured ? 'md:col-span-2' : ''}`} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 * index }}>
               <div className="bg-white dark:bg-gray-800 border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-2 hover:translate-y-2 transition-all duration-300">
+                {/* Project Image */}
+                <div className="relative overflow-hidden border-b-4 border-black">
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                  />
+
+                  {/* Project Type Badge */}
+                  <div className="absolute top-2 left-2">
+                    <motion.div className="bg-black text-white px-2 py-1 border-2 border-white shadow-brutal font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
+                      WEB APP
+                    </motion.div>
+                  </div>
+                </div>
+
                 {/* Project Header */}
                 <div className={`${project.color} p-6 border-b-4 border-black`}>
                   <div className="flex items-start justify-between">
@@ -95,6 +122,16 @@ export default function Projects() {
 
                   {/* Project Links */}
                   <div className="flex gap-4">
+                    <motion.a
+                      href={`/project/${project.id}`}
+                      className="flex items-center gap-2 px-4 py-2 bg-accent-500 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink size={16} />
+                      View Details
+                    </motion.a>
+
                     <motion.a
                       href={project.liveUrl}
                       target="_blank"
