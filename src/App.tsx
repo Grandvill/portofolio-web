@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,20 +10,19 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Certificates from './components/Certificates';
+import WildOasis from './components/projectDetail/WildOasis';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDark(true);
       document.documentElement.classList.add('dark');
     }
 
-    // Simulate loading
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -37,7 +38,7 @@ function App() {
     }
   };
 
-  // Loading screen
+  // Loading Screen
   if (isLoading) {
     return (
       <div className="min-h-screen bg-primary-400 flex items-center justify-center">
@@ -63,37 +64,52 @@ function App() {
   }
 
   return (
-    <AnimatePresence>
-      <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
-        <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
-          <Header isDark={isDark} toggleTheme={toggleTheme} />
+    <BrowserRouter>
+      <AnimatePresence>
+        <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
+          <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
+            <Header isDark={isDark} toggleTheme={toggleTheme} />
 
-          <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Certificates />
-            <Contact />
-          </motion.main>
+            <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+              <Routes>
+                {/* Home page */}
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Hero />
+                      <About />
+                      <Skills />
+                      <Projects />
+                      <Certificates />
+                      <Contact />
+                    </>
+                  }
+                />
 
-          <Footer />
+                {/* Dynamic project detail page */}
+                <Route path="/project/:id" element={<WildOasis />} />
+              </Routes>
+            </motion.main>
 
-          {/* Floating Action Button */}
-          <motion.button
-            className="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-40"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-          >
-            <span className="text-2xl">🚀</span>
-          </motion.button>
+            <Footer />
+
+            {/* Floating Button */}
+            <motion.button
+              className="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-40"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+            >
+              <span className="text-2xl">🚀</span>
+            </motion.button>
+          </div>
         </div>
-      </div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </BrowserRouter>
   );
 }
 
