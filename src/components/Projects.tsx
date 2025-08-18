@@ -30,7 +30,7 @@ export default function Projects() {
       githubUrl: 'https://github.com/Grandvill/wild-oasis-next',
       color: 'bg-primary-400',
       teamProject: false,
-      image: 'images/projects/wild-oasis.png',
+      image: 'images/projects/wild-oasis-next.png',
       id: 'wild-oasis-next',
     },
 
