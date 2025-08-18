@@ -13,14 +13,27 @@ export default function Projects() {
     {
       title: 'Wild Oasis ',
       description: 'A comprehensive hotel management system with booking functionality, room management, and guest services. Built with React and modern web technologies.',
-      tech: ['React', 'React Query', 'JavaScript', 'CSS', 'Supabase'],
+      tech: ['React', 'React Query', 'Tailwind CSS', 'Supabase'],
       liveUrl: 'https://wildoasisretreat.netlify.app/',
-      githubUrl: 'https://github.com/Grandvill/the-wild-oasis',
+      githubUrl: 'https://github.com/Grandvill/wild-oasis',
       color: 'bg-primary-400',
       teamProject: false,
       image: 'images/projects/wild-oasis.png',
       id: 'wild-oasis',
     },
+    {
+      title: 'The Wild Oasis Next ',
+      description:
+        'A hotel booking web application built with Next.js and Supabase, featuring secure authentication with NextAuth, real-time data handling using React Query, and a modern responsive UI. Users can explore cabins, check availability, and make bookings with a seamless experience.',
+      tech: ['Next.js', 'NextAuth', 'Tailwind CSS', 'Supabase'],
+      liveUrl: 'https://wildoasis-next-user.vercel.app/',
+      githubUrl: 'https://github.com/Grandvill/wild-oasis-next',
+      color: 'bg-primary-400',
+      teamProject: false,
+      image: 'images/projects/wild-oasis.png',
+      id: 'wild-oasis-next',
+    },
+
     {
       title: 'Movie Finder',
       description: 'An interactive movie discovery platform with search functionality, detailed movie information, and user-friendly interface for movie enthusiasts.',
