@@ -13,7 +13,7 @@ export default function Projects() {
     {
       title: 'Wild Oasis ',
       description: 'A comprehensive hotel management system with booking functionality, room management, and guest services. Built with React and modern web technologies.',
-      tech: ['React', 'React Query', 'Tailwind CSS', 'Supabase'],
+      tech: ['React', 'React Query', 'JavaScript', 'Tailwind CSS', 'Supabase'],
       liveUrl: 'https://wildoasisretreat.netlify.app/',
       githubUrl: 'https://github.com/Grandvill/wild-oasis',
       color: 'bg-primary-400',
@@ -25,7 +25,7 @@ export default function Projects() {
       title: 'The Wild Oasis Next ',
       description:
         'A hotel booking web application built with Next.js and Supabase, featuring secure authentication with NextAuth, real-time data handling using React Query, and a modern responsive UI. Users can explore cabins, check availability, and make bookings with a seamless experience.',
-      tech: ['Next.js', 'NextAuth', 'Tailwind CSS', 'Supabase'],
+      tech: ['Next.js', 'NextAuth', 'JavaScript', 'Tailwind CSS', 'Supabase'],
       liveUrl: 'https://wildoasis-next-user.vercel.app/',
       githubUrl: 'https://github.com/Grandvill/wild-oasis-next',
       color: 'bg-primary-400',
@@ -35,7 +35,28 @@ export default function Projects() {
     },
 
     {
-      title: 'Movie Finder',
+      title: 'SiKembar(Sistem Keluar Masuk Barang)',
+      description:
+        'SiKembar is a web-based application developed by the PKKM Informatics Department team at Gunadarma University to support disaster management in Cianjur Regency. It consists of four main integrated modules — Admin, Logistics, Donor, and Disaster Victim — designed to streamline data management, logistics distribution, aid requests, and donor contributions. SiKembar aims to improve coordination, transparency, and efficiency in disaster response.',
+      tech: ['CodeIgniter', 'Bootstrap', 'MySQL', 'PHP'],
+      githubUrl: 'https://github.com/isramrasal/bpbd_sikembar',
+      color: 'bg-accent-400',
+      image: 'images/projects/sikembar.png',
+      id: 'sikembar',
+    },
+    {
+      title: 'BIG Forum Revamp',
+      description:
+        'BigForum Revamp is a redesign project of the legacy BigForum website, aimed at updating its design and functionality. The site was built using NextJS and TailwindCSS to ensure a modern, fast, and responsive user interface. This internal platform for an Bisnis Indonesia Group includes content such as company profiles, financial management, and more, with a cleaner and more user-friendly structure.',
+      tech: ['Next.js', 'Node.js', 'Express.js', 'JavaScript', 'Tailwind CSS', 'PostgreSQL'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
+      color: 'bg-neon-400',
+      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      id: 'big-forum',
+    },
+    {
+      title: 'Movie Finder2',
       description: 'An interactive movie discovery platform with search functionality, detailed movie information, and user-friendly interface for movie enthusiasts.',
       tech: ['React', 'JavaScript', 'Movie API', 'CSS'],
       liveUrl: '#',
@@ -43,16 +64,6 @@ export default function Projects() {
       color: 'bg-accent-400',
       image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800',
       id: 'movie-finder',
-    },
-    {
-      title: 'Big Forum 3.0',
-      description: 'A modern discussion forum platform with real-time messaging, user authentication, and community features for enhanced user engagement.',
-      tech: ['Next.js', 'Node.js', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
-      color: 'bg-neon-400',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-      id: 'big-forum',
     },
     {
       title: 'Portfolio Website',
