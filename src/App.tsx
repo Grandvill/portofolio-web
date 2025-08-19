@@ -10,7 +10,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Certificates from './components/Certificates';
-import WildOasis from './components/projectDetail/WildOasis';
+import ProjectDetail from './components/projectDetail/ProjectDetail';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -88,7 +88,7 @@ function App() {
                 />
 
                 {/* Dynamic project detail page */}
-                <Route path="/project/:id" element={<WildOasis />} />
+                <Route path="/project/:id" element={<ProjectDetail />} />
               </Routes>
             </motion.main>
 
