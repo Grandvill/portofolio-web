@@ -65,14 +65,14 @@ export default function Projects() {
       id: 'movie-finder',
     },
     {
-      title: 'Portfolio Website',
-      description: 'This very website! A neobrutalism-inspired portfolio showcasing my work with interactive animations and modern design principles.',
-      tech: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'ITFreelanceHub',
+      description:
+        'ITFreelanceHub is a web-based platform that connects clients with professional IT freelancers. It focuses on services such as website development, mobile application development, UI/UX design, cybersecurity, and data analysis to support various technology project needs.',
+      tech: ['Laravel', 'Tailwind CSS', 'MySQL', 'PHP'],
+      githubUrl: 'https://github.com/Grandvill/itfreelancehub',
       color: 'bg-purple-400',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      id: 'portfolio',
+      image: '',
+      id: 'itfreelancehub',
     },
   ];
 
