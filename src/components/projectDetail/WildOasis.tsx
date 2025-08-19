@@ -1,4 +1,3 @@
-// WildOasis.tsx
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Github, Users, User, ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -16,9 +15,9 @@ interface ProjectData {
   image: string;
   isTeamProject: boolean;
   teamSize?: number;
-  role?: string;
-  duration: string;
-  challenges: string[];
+  // role?: string;
+  // duration: string;
+  // challenges: string[];
   features: string[];
   gallery: string[];
 }
@@ -26,20 +25,20 @@ interface ProjectData {
 const projectsData: Record<string, ProjectData> = {
   'wild-oasis': {
     id: 'wild-oasis',
-    title: 'Wild Oasis Resort',
+    title: 'Wild Oasis',
     description: 'A comprehensive hotel management system with booking functionality, room management, and guest services.',
     fullDescription:
       'Wild Oasis Resort is a full-featured hotel management system designed to streamline operations for resort and hotel businesses. The application provides comprehensive booking management, room allocation, guest services, and administrative tools. Built with modern React architecture, it offers a seamless user experience for both staff and guests.',
-    tech: ['React', 'JavaScript', 'CSS', 'API Integration', 'Local Storage', 'React Router'],
+    tech: ['React', 'React Query', 'JavaScript', 'Tailwind CSS', 'Supabase'],
     liveUrl: 'https://wildoasisretreat.netlify.app/',
     githubUrl: 'https://github.com/Grandvill/the-wild-oasis',
     color: 'bg-primary-400',
-    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '../images/projects/wild-oasis.png',
     isTeamProject: false,
-    role: 'Full Stack Developer',
-    duration: '3 months',
-    challenges: ['Implementing complex booking logic with date validation', 'Creating responsive design for multiple device types', 'Managing state across multiple components', 'Optimizing performance for large datasets'],
-    features: ['Real-time booking system', 'Room management dashboard', 'Guest check-in/check-out', 'Payment processing integration', 'Reporting and analytics', 'Mobile-responsive design'],
+    // duration: '2 months',
+    // role: 'Full Stack Developer',
+    // challenges: ['Implementing complex booking logic with date validation', 'Creating responsive design for multiple device types', 'Managing state across multiple components', 'Optimizing performance for large datasets'],
+    features: ['Real-time booking system', 'Room management dashboard', 'Guest check-in/check-out', 'Reporting and analytics', 'Mobile-responsive design'],
     gallery: [
       'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -48,7 +47,6 @@ const projectsData: Record<string, ProjectData> = {
       'https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=800',
     ],
   },
-  // ... other project data remains unchanged
 };
 
 export default function ProjectDetail() {
@@ -119,7 +117,7 @@ export default function ProjectDetail() {
                     {project.isTeamProject ? <Users size={20} /> : <User size={20} />}
                     {project.isTeamProject ? `Team Project (${project.teamSize} members)` : 'Solo Project'}
                   </div>
-                  <div className="bg-white px-4 py-2 border-2 border-black shadow-brutal font-mono font-bold text-black">{project.duration}</div>
+                  {/* <div className="bg-white px-4 py-2 border-2 border-black shadow-brutal font-mono font-bold text-black">{project.duration}</div> */}
                 </div>
               </div>
             </div>
@@ -133,8 +131,8 @@ export default function ProjectDetail() {
                 <h2 className="text-3xl font-black mb-6">Project Overview</h2>
                 <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300 mb-6">{project.fullDescription}</p>
                 <div className="flex items-center gap-2 text-sm font-mono font-bold">
-                  <span className="text-primary-500">Role:</span>
-                  <span>{project.role}</span>
+                  {/* <span className="text-primary-500">Role:</span>
+                  <span>{project.role}</span> */}
                 </div>
               </motion.div>
 
@@ -152,7 +150,7 @@ export default function ProjectDetail() {
               </motion.div>
 
               {/* Challenges */}
-              <motion.div className="bg-white dark:bg-gray-800 border-4 border-black shadow-brutal p-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
+              {/* <motion.div className="bg-white dark:bg-gray-800 border-4 border-black shadow-brutal p-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
                 <h3 className="text-2xl font-black mb-6">Challenges & Solutions</h3>
                 <div className="space-y-4">
                   {project.challenges.map((challenge, index) => (
@@ -164,7 +162,7 @@ export default function ProjectDetail() {
                     </motion.div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Sidebar */}
