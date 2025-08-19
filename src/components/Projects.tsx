@@ -49,10 +49,9 @@ export default function Projects() {
       description:
         'BigForum Revamp is a redesign project of the legacy BigForum website, aimed at updating its design and functionality. The site was built using NextJS and TailwindCSS to ensure a modern, fast, and responsive user interface. This internal platform for an Bisnis Indonesia Group includes content such as company profiles, financial management, and more, with a cleaner and more user-friendly structure.',
       tech: ['Next.js', 'Node.js', 'Express.js', 'JavaScript', 'Tailwind CSS', 'PostgreSQL'],
-      liveUrl: '#',
       githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
       color: 'bg-neon-400',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'images/projects/loginbigforum.jpg',
       id: 'big-forum',
     },
     {
