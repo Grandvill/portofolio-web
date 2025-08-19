@@ -11,6 +11,16 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'ITFreelanceHub',
+      description:
+        'ITFreelanceHub is a web-based platform that connects clients with professional IT freelancers. It focuses on services such as website development, mobile application development, UI/UX design, cybersecurity, and data analysis to support various technology project needs.',
+      tech: ['Laravel', 'Tailwind CSS', 'MySQL', 'PHP'],
+      githubUrl: 'https://github.com/Grandvill/itfreelancehub',
+      color: 'bg-purple-400',
+      image: 'images/projects/itfreelancehub.png',
+      id: 'itfreelancehub',
+    },
+    {
       title: 'Wild Oasis ',
       description: 'A comprehensive hotel management system with booking functionality, room management, and guest services. Built with React and modern web technologies.',
       tech: ['React', 'React Query', 'JavaScript', 'Tailwind CSS', 'Supabase'],
@@ -53,26 +63,6 @@ export default function Projects() {
       color: 'bg-neon-400',
       image: 'images/projects/loginbigforum.jpg',
       id: 'big-forum',
-    },
-    {
-      title: 'Movie Finder2',
-      description: 'An interactive movie discovery platform with search functionality, detailed movie information, and user-friendly interface for movie enthusiasts.',
-      tech: ['React', 'JavaScript', 'Movie API', 'CSS'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/Grandvill/movie-finder',
-      color: 'bg-accent-400',
-      image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800',
-      id: 'movie-finder',
-    },
-    {
-      title: 'ITFreelanceHub',
-      description:
-        'ITFreelanceHub is a web-based platform that connects clients with professional IT freelancers. It focuses on services such as website development, mobile application development, UI/UX design, cybersecurity, and data analysis to support various technology project needs.',
-      tech: ['Laravel', 'Tailwind CSS', 'MySQL', 'PHP'],
-      githubUrl: 'https://github.com/Grandvill/itfreelancehub',
-      color: 'bg-purple-400',
-      image: '',
-      id: 'itfreelancehub',
     },
   ];
 
