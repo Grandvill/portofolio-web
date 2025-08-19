@@ -31,7 +31,7 @@ const projectsData: Record<string, ProjectData> = {
       'Wild Oasis Resort is a full-featured hotel management system designed to streamline operations for resort and hotel businesses. The application provides comprehensive booking management, room allocation, guest services, and administrative tools. Built with modern React architecture, it offers a seamless user experience for both staff and guests.',
     tech: ['React', 'React Query', 'JavaScript', 'Tailwind CSS', 'Supabase'],
     liveUrl: 'https://wildoasisretreat.netlify.app/',
-    githubUrl: 'https://github.com/Grandvill/the-wild-oasis',
+    githubUrl: 'https://github.com/Grandvill/wild-oasis',
     color: 'bg-primary-400',
     image: '../images/projects/wild-oasis.png',
     isTeamProject: false,
@@ -298,11 +298,45 @@ export default function ProjectDetail() {
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Modal Navigation Arrows */}
+              <motion.button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 border-4 border-white shadow-brutal hover:shadow-brutal-lg transition-all duration-200 z-20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronLeft size={24} />
+              </motion.button>
+
+              <motion.button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 border-4 border-white shadow-brutal hover:shadow-brutal-lg transition-all duration-200 z-20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronRight size={24} />
+              </motion.button>
+
               <motion.button onClick={closeModal} className="absolute -top-4 -right-4 bg-red-500 text-white p-2 border-4 border-black shadow-brutal z-10" whileHover={{ scale: 1.1, rotate: 90 }} whileTap={{ scale: 0.9 }}>
                 <X size={24} />
               </motion.button>
 
-              <img src={project.gallery[currentImageIndex]} alt={`${project.title} full size`} className="w-full h-auto max-h-[80vh] object-contain" />
+              <div className="relative">
+                <motion.img
+                  key={currentImageIndex}
+                  src={project.gallery[currentImageIndex]}
+                  alt={`${project.title} full size`}
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+
+                {/* Image Counter in Modal */}
+                <div className="absolute bottom-4 right-4 bg-black text-white px-3 py-1 border-2 border-white shadow-brutal font-mono text-sm font-bold">
+                  {currentImageIndex + 1} / {project.gallery.length}
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
