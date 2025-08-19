@@ -33,7 +33,7 @@ const projectsData: Record<string, ProjectData> = {
     liveUrl: 'https://wildoasisretreat.netlify.app/',
     githubUrl: 'https://github.com/Grandvill/wild-oasis',
     color: 'bg-primary-400',
-    image: '../images/projects/wild-oasis.png',
+    image: '../images/projects/itfreelancehub/banner.png',
     isTeamProject: false,
     // duration: '2 months',
     // role: 'Full Stack Developer',
