@@ -9,7 +9,7 @@ interface ProjectData {
   description: string;
   fullDescription: string;
   tech: string[];
-  liveUrl: string;
+  // liveUrl: string;
   githubUrl: string;
   color: string;
   image: string;
@@ -25,31 +25,31 @@ interface ProjectData {
 const projectsData: Record<string, ProjectData> = {
   itfreelancehub: {
     id: 'itfreelancehub',
-    title: 'Wild Oasis',
+    title: 'ITFreelanceHub',
     description: 'A comprehensive hotel management system with booking functionality, room management, and guest services.',
     fullDescription:
       'ITFreelanceHub is a comprehensive web-based freelance marketplace specializing in IT services. The platform bridges the gap between clients and professional IT freelancers, offering a wide range of services including website development, mobile application development, UI/UX design, cybersecurity, and data analysis. It provides a user-friendly interface for clients to post projects, browse freelancer profiles, and manage collaborations seamlessly. Built with Laravel, Tailwind CSS, PHP, and MySQL, ITFreelanceHub ensures reliable performance, secure transactions, and scalable architecture to support both small-scale and enterprise-level technology projects. Its goal is to empower clients with access to skilled IT professionals while enabling freelancers to showcase their expertise and grow their careers in the digital economy.',
-    tech: ['React', 'React Query', 'JavaScript', 'Tailwind CSS', 'Supabase'],
-    liveUrl: 'https://wildoasisretreat.netlify.app/',
-    githubUrl: 'https://github.com/Grandvill/wild-oasis',
+    tech: ['Laravel', 'Tailwind CSS', 'MySQL', 'PHP'],
+    // liveUrl: '',
+    githubUrl: 'https://github.com/Grandvill/itfreelancehub',
     color: 'bg-primary-400',
     image: '../images/projects/itfreelancehub/banner.png',
     isTeamProject: false,
     // duration: '2 months',
     // role: 'Full Stack Developer',
     // challenges: ['Implementing complex booking logic with date validation', 'Creating responsive design for multiple device types', 'Managing state across multiple components', 'Optimizing performance for large datasets'],
-    features: ['Real-time booking system', 'Room management dashboard', 'Guest check-in/check-out', 'Reporting and analytics', 'Mobile-responsive design'],
+    features: ['Service categories', 'Booking system', 'Admin dashboard and project management', 'Responsive design', 'User authentication'],
     gallery: [
-      '../images/projects/wild-oasis/cabin.png',
-      '../images/projects/wild-oasis/cabin-detail.png',
-      '../images/projects/wild-oasis/booking.png',
-      '../images/projects/wild-oasis/login.png',
-      '../images/projects/wild-oasis/dashboard.png',
-      '../images/projects/wild-oasis/booking-admin.png',
-      '../images/projects/wild-oasis/cabins-admin.png',
-      '../images/projects/wild-oasis/user-admin.png',
-      '../images/projects/wild-oasis/settings-admin.png',
-      '../images/projects/wild-oasis/update-account.png',
+      '../images/projects/itfreelancehub.png',
+      '../images/projects/itfreelancehub/services.png',
+      '../images/projects/itfreelancehub/booking.png',
+      '../images/projects/itfreelancehub/company-profile.png',
+      '../images/projects/itfreelancehub/track-order.png',
+      '../images/projects/itfreelancehub/login.png',
+      '../images/projects/itfreelancehub/dashboard.png',
+      '../images/projects/itfreelancehub/manajemen-katalog.png',
+      '../images/projects/itfreelancehub/manajemen-pesanan.png',
+      '../images/projects/itfreelancehub/laporan-penjualan.png',
     ],
   },
 };
@@ -196,7 +196,7 @@ export default function ProjectDetail() {
                 <h3 className="text-xl font-black mb-4">Project Links</h3>
                 <div className="space-y-3">
                   <motion.a
-                    href={project.liveUrl}
+                    // href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 w-full px-4 py-3 bg-primary-500 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
