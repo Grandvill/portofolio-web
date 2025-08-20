@@ -10,7 +10,7 @@ interface ProjectData {
   fullDescription: string;
   tech: string[];
   // liveUrl: string;
-  githubUrl: string;
+  // githubUrl: string;
   color: string;
   image: string;
   isTeamProject: boolean;
@@ -25,20 +25,21 @@ interface ProjectData {
 const projectsData: Record<string, ProjectData> = {
   sikembar: {
     id: 'sikembar',
-    title: 'ITFreelanceHub',
-    description: 'A comprehensive hotel management system with booking functionality, room management, and guest services.',
+    title: 'SiKembar (Sistem Informasi Keluar Masuk Barang)',
+    description: '',
     fullDescription:
-      'ITFreelanceHub is a comprehensive web-based freelance marketplace specializing in IT services. The platform bridges the gap between clients and professional IT freelancers, offering a wide range of services including website development, mobile application development, UI/UX design, cybersecurity, and data analysis. It provides a user-friendly interface for clients to post projects, browse freelancer profiles, and manage collaborations seamlessly. Built with Laravel, Tailwind CSS, PHP, and MySQL, ITFreelanceHub ensures reliable performance, secure transactions, and scalable architecture to support both small-scale and enterprise-level technology projects. Its goal is to empower clients with access to skilled IT professionals while enabling freelancers to showcase their expertise and grow their careers in the digital economy.',
-    tech: ['Laravel', 'Tailwind CSS', 'MySQL', 'PHP'],
+      'SiKembar (Sistem Informasi Keluar Masuk Barang) is a comprehensive web-based information system designed to support disaster management efforts, particularly in logistics coordination for Cianjur Regency. The system integrates four core modules: Admin, Logistics, Donor, and Disaster Victim. The Admin module manages user accounts and overall system control; the Logistics module tracks incoming and outgoing goods in real time to ensure accurate distribution; the Donor module allows individuals or organizations to contribute resources transparently; and the Disaster Victim module enables victims to submit aid requests directly.',
+    tech: ['CodeIgniter', 'Bootstrap', 'MySQL', 'PHP'],
     // liveUrl: '',
-    githubUrl: 'https://github.com/Grandvill/itfreelancehub',
+    // githubUrl: 'https://github.com/isramrasal/bpbd_sikembar',
     color: 'bg-primary-400',
     image: '../images/projects/itfreelancehub/banner.png',
-    isTeamProject: false,
+    isTeamProject: true,
+    teamSize: 4,
     // duration: '2 months',
     // role: 'Full Stack Developer',
     // challenges: ['Implementing complex booking logic with date validation', 'Creating responsive design for multiple device types', 'Managing state across multiple components', 'Optimizing performance for large datasets'],
-    features: ['Service categories', 'Booking system', 'Admin dashboard and project management', 'Responsive design', 'User authentication'],
+    features: ['Admin module for managing users and system settings', 'Logistics module for tracking incoming and outgoing goods', 'Donor module for contributing resources', 'Disaster Victim module for submitting aid requests'],
     gallery: [
       '../images/projects/itfreelancehub.png',
       '../images/projects/itfreelancehub/services.png',
@@ -207,7 +208,7 @@ export default function ProjectDetail() {
                     Live Demo
                   </motion.a>
                   <motion.a
-                    href={project.githubUrl}
+                    // href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 w-full px-4 py-3 bg-gray-800 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"

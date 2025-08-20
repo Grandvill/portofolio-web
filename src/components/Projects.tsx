@@ -45,7 +45,7 @@ export default function Projects() {
     },
 
     {
-      title: 'SiKembar(Sistem Keluar Masuk Barang)',
+      title: 'SiKembar(Sistem Informasi Keluar Masuk Barang)',
       description:
         'SiKembar is a web-based application developed by the PKKM Informatics Department team at Gunadarma University to support disaster management in Cianjur Regency. It consists of four main integrated modules — Admin, Logistics, Donor, and Disaster Victim — designed to streamline data management, logistics distribution, aid requests, and donor contributions. SiKembar aims to improve coordination, transparency, and efficiency in disaster response.',
       tech: ['CodeIgniter', 'Bootstrap', 'MySQL', 'PHP'],
