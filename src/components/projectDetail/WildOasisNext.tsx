@@ -9,7 +9,7 @@ interface ProjectData {
   description: string;
   fullDescription: string;
   tech: string[];
-  // liveUrl: string;
+  liveUrl: string;
   githubUrl: string;
   color: string;
   image: string;
@@ -31,7 +31,7 @@ const projectsData: Record<string, ProjectData> = {
     fullDescription:
       'The Wild Oasis Next is a modern hotel booking web application built with Next.js and Supabase. It features secure authentication with NextAuth, server-side data fetching with Supabase, and a responsive user interface styled with Tailwind CSS. Users can browse cabins, check availability, and make bookings seamlessly, while administrators can manage cabins, reservations, and user data efficiently.',
     tech: ['Next.js', 'NextAuth', 'JavaScript', 'Tailwind CSS', 'Supabase'],
-    // liveUrl: '',
+    liveUrl: 'https://wildoasis-next-user.vercel.app/',
     githubUrl: 'https://github.com/Grandvill/itfreelancehub',
     color: 'bg-primary-400',
     image: '../images/projects/wild-oasis-next/banner.png',
@@ -203,7 +203,7 @@ export default function ProjectDetail() {
                 <h3 className="text-xl font-black mb-4">Project Links</h3>
                 <div className="space-y-3">
                   <motion.a
-                    // href={project.liveUrl}
+                    href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 w-full px-4 py-3 bg-primary-500 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
