@@ -34,7 +34,7 @@ export default function Projects() {
     {
       title: 'The Wild Oasis Next ',
       description:
-        'A hotel booking web application built with Next.js and Supabase, featuring secure authentication with NextAuth, real-time data handling using React Query, and a modern responsive UI. Users can explore cabins, check availability, and make bookings with a seamless experience.',
+        'A modern hotel booking web application built with Next.js and Supabase. It features secure authentication with NextAuth, server-side data handling, and a responsive UI with Tailwind CSS. Users can explore cabins, check availability, and make bookings with ease.',
       tech: ['Next.js', 'NextAuth', 'JavaScript', 'Tailwind CSS', 'Supabase'],
       liveUrl: 'https://wildoasis-next-user.vercel.app/',
       githubUrl: 'https://github.com/Grandvill/wild-oasis-next',
