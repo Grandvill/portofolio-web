@@ -62,7 +62,7 @@ export default function Projects() {
       githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
       color: 'bg-yellow-400',
       image: 'images/projects/loginbigforum.jpg',
-      id: 'big-forum',
+      id: 'bigforum',
     },
   ];
 
