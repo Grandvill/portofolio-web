@@ -50,8 +50,8 @@ export default function About() {
 
               <motion.div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
                 <p>
-                  Hi there! I'm <strong className="text-primary-500">Zahidan Ardhiansyah</strong>, a passionate Full Stack Developer with a Bachelor's degree in Computer Science. Based in Indonesia, I am highly motivated to gain practical
-                  experience in web development and contribute to projects that enhance my technical and professional skills.
+                  Hi there! I'm <strong className="text-primary-500">Zahidan Ardhiansyah</strong>, a passionate Full Stack Developer with a Bachelor's degree in Computer Science at Gunadarma University. Based in Indonesia, I am highly
+                  motivated to gain practical experience in web development and contribute to projects that enhance my technical and professional skills.
                 </p>
 
                 <p>
@@ -64,7 +64,7 @@ export default function About() {
             </div>
 
             <motion.div className="flex flex-wrap gap-4" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.7 }}>
-              <div className="px-4 py-2 bg-primary-100 text-primary-800 font-mono font-bold border-2 border-primary-800">🎓 Bachelor's in Computer Science</div>
+              <div className="px-4 py-2 bg-primary-100 text-primary-800 font-mono font-bold border-2 border-primary-800">🎓 Bachelor’s Degree in Computer Science at Gunadarma University</div>
               <div className="px-4 py-2 bg-accent-100 text-accent-800 font-mono font-bold border-2 border-accent-800">📍 Bekasi City, West Java, Indonesia</div>
               <div className="px-4 py-2 bg-neon-100 text-neon-800 font-mono font-bold border-2 border-neon-800">💼 Available for Work</div>
             </motion.div>
