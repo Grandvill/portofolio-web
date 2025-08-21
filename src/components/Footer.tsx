@@ -7,7 +7,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Grandvill', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/zahidan-ardhiansyah/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:zahidanardhiansyah@gmail.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:zahidan23@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -17,11 +17,9 @@ export default function Footer() {
           {/* Logo/Name */}
           <motion.div className="text-center md:text-left" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h3 className="text-2xl font-black mb-2">
-              <span className="text-primary-400">Z</span>
-              <span className="text-accent-400">A</span>
-              <span className="text-neon-400">H</span>
+              <span className="text-accent-400">ZAHIDAN ARDHIANSYAH</span>
             </h3>
-            <p className="font-mono text-sm text-gray-400">Frontend Developer & UI/UX Designer</p>
+            <p className="font-mono text-sm text-gray-400">Full Stack Web Developer</p>
           </motion.div>
 
           {/* Social Links */}
@@ -62,7 +60,7 @@ export default function Footer() {
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            "Code is poetry written in logic" ✨
+            "life sometimes needs a little surprise" ✨
           </motion.p>
         </motion.div>
       </div>
