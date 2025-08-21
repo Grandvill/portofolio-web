@@ -13,14 +13,15 @@ export default function Certificates() {
 
   const certificates = [
     {
-      title: 'Industry Class Certificate',
-      issuer: 'PT. Ciptadra Softindo',
-      date: 'February 2025',
-      description: 'Training in modern web development stack (frontend & backend), mastering industry-standard tools.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'React.JS', 'Next.JS', 'Golang'],
+      title: 'Belajar Back-End Pemula dengan JavaScript',
+      issuer: 'Dicoding Indonesia',
+      date: 'June 2025',
+      description:
+        'Learned the fundamentals of back-end development, including HTTP communication, RESTful API architecture, Node.js basics, and building web services using Node.js and Hapi framework. Gained hands-on experience deploying web services to Amazon EC2 and testing APIs with Postman.Learned the fundamentals of JavaScript programming and how to build a simple web application using Node.js and Hapi',
+      skills: ['Node.js', 'RESTful API', 'Hapi.js', 'Amazon EC2', 'Postman', 'NPM'],
       color: 'bg-primary-400',
       borderColor: 'border-primary-600',
-      image: '/images/certificates/dicoding_zahidan.png',
+      images: ['/images/certificates/dicoding_zahidan.png', '/images/certificates/dicoding2.png'],
     },
     {
       title: 'Certificate of Competence',
