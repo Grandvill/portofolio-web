@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award, Calendar, ExternalLink, X, ZoomIn } from 'lucide-react';
+import { Award, Calendar, ExternalLink, X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Certificates() {
   const [ref, inView] = useInView({
@@ -9,7 +9,7 @@ export default function Certificates() {
     threshold: 0.1,
   });
 
-  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<{ images: string[]; index: number } | null>(null);
 
   const certificates = [
     {
@@ -21,7 +21,7 @@ export default function Certificates() {
       skills: ['Node.js', 'RESTful API', 'Hapi.js', 'Amazon EC2', 'Postman', 'NPM'],
       color: 'bg-primary-400',
       borderColor: 'border-primary-600',
-      images: ['/images/certificates/dicoding_zahidan.png', '/images/certificates/dicoding2.png'],
+      images: ['images/certificates/dicoding_zahidan.png', 'images/certificates/dicoding2.png'],
     },
     {
       title: 'Certificate of Competence',
@@ -31,7 +31,7 @@ export default function Certificates() {
       skills: ['Web Development', 'Programming', 'Software Development', 'Junior Web Developer'],
       color: 'bg-accent-400',
       borderColor: 'border-accent-600',
-      image: '/images/certificates/bisnis_zahidan.png',
+      images: ['https://images.pexels.com/photos/4145038/pexels-photo-4145038.jpeg?auto=compress&cs=tinysrgb&w=800', 'https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg?auto=compress&cs=tinysrgb&w=800'],
     },
     {
       title: 'TOEIC Certificate',
@@ -41,16 +41,34 @@ export default function Certificates() {
       skills: ['Listening', 'Reading', 'Grammar', 'Vocabulary', 'Comprehension'],
       color: 'bg-neon-400',
       borderColor: 'border-neon-600',
-      image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
+      images: ['https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800'],
     },
   ];
 
-  const openModal = (image: string) => {
-    setSelectedCertificate(image);
+  const openModal = (images: string[], startIndex: number = 0) => {
+    setSelectedCertificate({ images, index: startIndex });
   };
 
   const closeModal = () => {
     setSelectedCertificate(null);
+  };
+
+  const nextImage = () => {
+    if (selectedCertificate) {
+      setSelectedCertificate({
+        ...selectedCertificate,
+        index: (selectedCertificate.index + 1) % selectedCertificate.images.length,
+      });
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedCertificate) {
+      setSelectedCertificate({
+        ...selectedCertificate,
+        index: (selectedCertificate.index - 1 + selectedCertificate.images.length) % selectedCertificate.images.length,
+      });
+    }
   };
 
   return (
@@ -99,19 +117,16 @@ export default function Certificates() {
 
                   {/* Certificate Content */}
                   <div className="p-6">
-                    {/* Certificate Image with Enhanced Styling */}
                     <motion.div
                       className="relative mb-6 group/image cursor-pointer"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                       whileHover={{ scale: 1.05 }}
-                      onClick={() => openModal(cert.image)}
+                      onClick={() => openModal(cert.images, 0)}
                     >
                       <div className="relative overflow-hidden border-4 border-black shadow-brutal">
-                        <img src={cert.image} alt={cert.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover/image:scale-110" />
-
-                        {/* Overlay with zoom icon */}
+                        <img src={cert.images[0]} alt={cert.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover/image:scale-110" />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover/image:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                           <motion.div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" whileHover={{ scale: 1.2 }}>
                             <div className="bg-white p-3 border-2 border-black shadow-brutal">
@@ -119,7 +134,6 @@ export default function Certificates() {
                             </div>
                           </motion.div>
                         </div>
-
                         {/* Certificate Badge */}
                         <div className="absolute top-2 right-2">
                           <motion.div
@@ -159,13 +173,13 @@ export default function Certificates() {
 
                     {/* View Certificate Button */}
                     <motion.button
-                      onClick={() => openModal(cert.image)}
+                      onClick={() => openModal(cert.images, 0)}
                       className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-black text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <ExternalLink size={16} />
-                      View Certificate
+                      View Certificate{cert.images.length > 1 ? 's' : ''}
                     </motion.button>
                   </div>
 
@@ -229,6 +243,27 @@ export default function Certificates() {
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
+              {selectedCertificate.images.length > 1 && (
+                <>
+                  <motion.button
+                    onClick={prevImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 border-4 border-white shadow-brutal hover:shadow-brutal-lg transition-all duration-200 z-20"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <ChevronLeft size={24} />
+                  </motion.button>
+
+                  <motion.button
+                    onClick={nextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 border-4 border-white shadow-brutal hover:shadow-brutal-lg transition-all duration-200 z-20"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <ChevronRight size={24} />
+                  </motion.button>
+                </>
+              )}
               {/* Close Button */}
               <motion.button onClick={closeModal} className="absolute -top-4 -right-4 bg-red-500 text-white p-2 border-4 border-black shadow-brutal z-10" whileHover={{ scale: 1.1, rotate: 90 }} whileTap={{ scale: 0.9 }}>
                 <X size={24} />
@@ -236,7 +271,15 @@ export default function Certificates() {
 
               {/* Certificate Image */}
               <div className="overflow-hidden">
-                <motion.img src={selectedCertificate} alt="Certificate" className="w-full h-auto max-h-[80vh] object-contain" initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ delay: 0.2 }} />
+                <motion.img
+                  key={selectedCertificate.index}
+                  src={selectedCertificate.images[selectedCertificate.index]}
+                  alt="Certificate"
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
               </div>
 
               {/* Modal Footer */}
@@ -244,7 +287,14 @@ export default function Certificates() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Award size={20} className="text-black" />
-                    <span className="font-mono font-bold text-black">Official Certificate</span>
+                    <span className="font-mono font-bold text-black">
+                      Official Certificate
+                      {selectedCertificate.images.length > 1 && (
+                        <span className="ml-2">
+                          ({selectedCertificate.index + 1}/{selectedCertificate.images.length})
+                        </span>
+                      )}
+                    </span>
                   </div>
                   <motion.button
                     onClick={closeModal}
