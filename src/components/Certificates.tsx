@@ -13,6 +13,16 @@ export default function Certificates() {
 
   const certificates = [
     {
+      title: 'The Ultimate React Course 2025: React, Next.js, Redux & More',
+      issuer: 'Udemy',
+      date: 'July 2025',
+      description: 'Learned the fundamentals of React, Next.js, and Redux. Built a portfolio website using React and Next.js using supabase and deployed it on Vercel.',
+      skills: ['JavaScript', 'React.js', 'Next.js', 'Redux', 'React Query', 'Supabase', 'Vercel', 'Tailwind CSS'],
+      color: 'bg-accent-400',
+      borderColor: 'border-accent-600',
+      images: ['images/certificates/udemy.png'],
+    },
+    {
       title: 'Belajar Back-End Pemula dengan JavaScript',
       issuer: 'Dicoding Indonesia',
       date: 'June 2025',
@@ -24,24 +34,89 @@ export default function Certificates() {
       images: ['images/certificates/dicoding_zahidan.png', 'images/certificates/dicoding2.png'],
     },
     {
-      title: 'Certificate of Competence',
-      issuer: 'BNSP (Badan Nasional Sertifikasi Profesi)',
-      date: 'January 2025',
-      description: 'Professional certification in Programming and Software Development (Junior Web Developer).',
-      skills: ['Web Development', 'Programming', 'Software Development', 'Junior Web Developer'],
-      color: 'bg-accent-400',
-      borderColor: 'border-accent-600',
-      images: ['https://images.pexels.com/photos/4145038/pexels-photo-4145038.jpeg?auto=compress&cs=tinysrgb&w=800', 'https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg?auto=compress&cs=tinysrgb&w=800'],
-    },
-    {
-      title: 'TOEIC Certificate',
-      issuer: 'WELTS (World English Language Testing Services)',
-      date: 'December 2024',
-      description: 'Demonstrates strong English communication skills for technical and international collaboration.',
-      skills: ['Listening', 'Reading', 'Grammar', 'Vocabulary', 'Comprehension'],
+      title: 'GO-LANG FOR INTERMEDIATE',
+      issuer: 'Lembaga Pengembangan Komputerisasi Universitas Gunadarma',
+      date: 'Agust 2024',
+      description: 'Completed an intermediate-level Go programming course focusing on practical implementations of Go syntax, data structures, and concurrency to build efficient and scalable applications.',
+      skills: ['GoLang', 'Concurrency', 'Data Structures', 'Backend Development'],
       color: 'bg-neon-400',
       borderColor: 'border-neon-600',
-      images: ['https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800'],
+      images: ['images/certificates/golang_intermediate.png'],
+    },
+    {
+      title: 'Sertifikat Keikutsertaan MSIB Batch 6',
+      issuer: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia',
+      date: 'June 2024',
+      description: 'Successfully participated in the Kampus Merdeka Certified Internship Program (Batch 6) at PT Jurnalindo Aksara Grafika (Bisnis Indonesia Group), gaining industry experience and contributing to IT-related projects.',
+      skills: ['Internship Experience', 'Industry Collaboration', 'Professional Development'],
+      color: 'bg-blue-400',
+      borderColor: 'border-blue-600',
+      images: ['images/certificates/kampus_merdeka.png'],
+    },
+    {
+      title: 'Magang Merdeka Batch 6 Bisnis Indonesia Group',
+      issuer: 'Bisnis Indonesia Group',
+      date: 'June 2024',
+      description:
+        'Completed a certified internship as an IT Programmer at Bisnis Indonesia Group under the Kampus Merdeka program. Contributed to the development and improvement of internal applications, gaining practical experience in software engineering and IT solutions.',
+      skills: ['IT Programming', 'Software Development', 'Team Collaboration', 'Problem Solving'],
+      color: 'bg-green-400',
+      borderColor: 'border-green-600',
+      images: ['images/certificates/msib6.png'],
+    },
+    {
+      title: 'Basic Web Application Design',
+      issuer: 'Universitas Gunadarma',
+      date: 'February 2024',
+      description: 'Completed training on designing basic web applications. Covered user interface design principles, layout planning, navigation structure, and usability considerations to build effective and user-friendly applications.',
+      skills: ['Web Design', 'UI/UX', 'Application Design'],
+      color: 'bg-purple-400',
+      borderColor: 'border-purple-600',
+      images: ['/images/certificates/basic-web-design.png'],
+    },
+    {
+      title: 'Software Engineering Fundamental Course (SEFC23)',
+      issuer: 'Universitas Gunadarma',
+      date: 'November 2023',
+      description:
+        'Attended the Software Engineering Fundamental Course (SEFC23), covering essential concepts in software engineering including software development lifecycle (SDLC), requirements analysis, system design, testing, and project management fundamentals. Learned the principles of structured and object-oriented development methodologies.',
+      skills: ['Software Engineering', 'SDLC', 'System Design', 'Project Management', 'Testing'],
+      color: 'bg-accent-400',
+      borderColor: 'border-accent-600',
+      images: ['/images/certificates/software-engineering-fundamental.png'],
+    },
+    {
+      title: 'GO-LANG FOR BEGINNER',
+      issuer: 'Lembaga Pengembangan Komputerisasi Universitas Gunadarma',
+      date: 'Agust 2023',
+      description:
+        'Completed beginner-level training on Go programming language, covering fundamentals such as data types, variables, functions, control structures, and arrays. Gained basic understanding of Go syntax and how to build simple console-based applications.',
+      skills: ['GoLang', 'Programming Basics'],
+      color: 'bg-yellow-400',
+      borderColor: 'border-yellow-600',
+      images: ['/images/certificates/golang-beginner.png'],
+    },
+    {
+      title: 'Building Website using HTML 5',
+      issuer: 'Universitas Gunadarma',
+      date: 'July 2023',
+      description:
+        'Completed training on building websites using HTML5, covering fundamental elements such as headings, paragraphs, tables, lists, and multimedia elements. Learned to use HTML5 canvas for drawing lines, circles, and shapes, and created a simple website using HTML5.',
+      skills: ['HTML5', 'Web Development'],
+      color: 'bg-blue-400',
+      borderColor: 'border-blue-600',
+      images: ['/images/certificates/html5.png'],
+    },
+    {
+      title: 'Fundamental Web Programming',
+      issuer: 'Universitas Gunadarma',
+      date: 'August 2022',
+      description:
+        'Completed training on fundamental web programming, including introduction to web programming, Go programming basics, control structures, and introduction to J2EE, Servlets, JSP, and web applications with J2EE. Also learned basics of .NET framework with C#, server controls, CSS in ASP.NET, and application state management.',
+      skills: ['Web Programming', 'Go', 'J2EE', 'JSP', 'Servlets', 'ASP.NET', 'C#', 'CSS'],
+      color: 'bg-green-400',
+      borderColor: 'border-green-600',
+      images: ['/images/certificates/fundamental-web.png'],
     },
   ];
 
@@ -144,8 +219,6 @@ export default function Certificates() {
                             CERTIFIED
                           </motion.div>
                         </div>
-
-                        {/* Decorative Corner */}
                         <div className="absolute bottom-0 left-0 w-0 h-0 border-r-[15px] border-r-transparent border-t-[15px] border-t-black"></div>
                       </div>
                     </motion.div>
@@ -182,8 +255,6 @@ export default function Certificates() {
                       View Certificate{cert.images.length > 1 ? 's' : ''}
                     </motion.button>
                   </div>
-
-                  {/* Decorative Corner */}
                   <div className="absolute top-0 right-0 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-black"></div>
                 </div>
               </motion.div>
@@ -191,7 +262,7 @@ export default function Certificates() {
           </div>
 
           {/* Achievement Stats */}
-          <motion.div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.8 }}>
+          {/* <motion.div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.8 }}>
             {[
               { label: 'Certifications Earned', value: '3+', icon: '🏆' },
               { label: 'Skills Validated', value: '15+', icon: '✅' },
@@ -212,7 +283,7 @@ export default function Certificates() {
                 <div className="font-mono font-bold text-sm">{stat.label}</div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* Call to Action */}
           <motion.div className="text-center mt-12" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 1.2 }}>
