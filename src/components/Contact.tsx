@@ -40,14 +40,14 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'zahidanardhiansyah@gmail.com',
-      href: 'mailto:zahidanardhiansyah@gmail.com',
+      value: 'zahidan23@gmail.com',
+      href: 'mailto:zahidan23@gmail.com',
       color: 'bg-primary-400',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Indonesia',
+      value: 'Bekasi City, West Java, Indonesia',
       href: '#',
       color: 'bg-accent-400',
     },
