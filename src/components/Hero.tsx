@@ -57,14 +57,16 @@ export default function Hero() {
                 View My Work
               </motion.button>
 
-              <motion.button
+              <motion.a
+                href="/CV_Zahidan Ardhiansyah.pdf"
+                download="CV_Zahidan Ardhiansyah.pdf"
                 className="px-6 py-3 bg-white dark:bg-gray-800 text-black dark:text-white font-mono font-bold border-2 border-black dark:border-white shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={18} />
                 Download CV
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             <motion.div className="flex gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
