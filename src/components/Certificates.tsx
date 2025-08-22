@@ -16,7 +16,7 @@ export default function Certificates() {
       title: 'The Ultimate React Course 2025: React, Next.js, Redux & More',
       issuer: 'Udemy',
       date: 'July 2025',
-      description: 'Learned the fundamentals of React, Next.js, and Redux. Built a portfolio website using React and Next.js using supabase and deployed it on Vercel.',
+      description: 'Learned the fundamentals of React, Next.js, and Redux. Built a portfolio website using React and Next.js using supabase and deployed it on Vercel and Netify.',
       skills: ['JavaScript', 'React.js', 'Next.js', 'Redux', 'React Query', 'Supabase', 'Vercel', 'Tailwind CSS'],
       color: 'bg-accent-400',
       borderColor: 'border-accent-600',
@@ -62,7 +62,7 @@ export default function Certificates() {
       skills: ['IT Programming', 'Software Development', 'Team Collaboration', 'Problem Solving'],
       color: 'bg-green-400',
       borderColor: 'border-green-600',
-      images: ['images/certificates/msib6.png'],
+      images: ['images/certificates/bisnis_zahidan.png'],
     },
     {
       title: 'Basic Web Application Design',
@@ -72,18 +72,18 @@ export default function Certificates() {
       skills: ['Web Design', 'UI/UX', 'Application Design'],
       color: 'bg-purple-400',
       borderColor: 'border-purple-600',
-      images: ['/images/certificates/basic-web-design.png'],
+      images: ['/images/certificates/basic_web_application_desain.png', '/images/certificates/basic_web_application_desain2.png'],
     },
     {
       title: 'Software Engineering Fundamental Course',
       issuer: 'RevoU',
       date: 'November 2023',
       description:
-        'Attended the Software Engineering Fundamental Course (SEFC23), covering essential concepts in software engineering including software development lifecycle (SDLC), requirements analysis, system design, testing, and project management fundamentals. Learned the principles of structured and object-oriented development methodologies.',
-      skills: ['Software Engineering', 'SDLC', 'System Design', 'Project Management', 'Testing'],
+        'Completed the Software Engineering Fundamental Course, focusing on the basics of web development. Learned how to build simple websites using HTML for structure, CSS for styling, and JavaScript for interactivity, as well as an introduction to version control with Git and GitHub.',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
       color: 'bg-accent-400',
       borderColor: 'border-accent-600',
-      images: ['/images/certificates/software-engineering-fundamental.png'],
+      images: ['/images/certificates/sertif_revou.png'],
     },
     {
       title: 'GO-LANG FOR BEGINNER',
@@ -94,7 +94,7 @@ export default function Certificates() {
       skills: ['GoLang', 'Programming Basics'],
       color: 'bg-yellow-400',
       borderColor: 'border-yellow-600',
-      images: ['/images/certificates/golang-beginner.png'],
+      images: ['/images/certificates/golang_beginner.png', '/images/certificates/golang_beginner2.png'],
     },
     {
       title: 'Building Website using HTML 5',
@@ -105,7 +105,7 @@ export default function Certificates() {
       skills: ['HTML5', 'Web Development'],
       color: 'bg-blue-400',
       borderColor: 'border-blue-600',
-      images: ['/images/certificates/html5.png'],
+      images: ['/images/certificates/building_website_html5.png', '/images/certificates/building_website_html52.png'],
     },
     {
       title: 'Fundamental Web Programming',
@@ -116,7 +116,7 @@ export default function Certificates() {
       skills: ['Web Programming', 'Go', 'J2EE', 'JSP', 'Servlets', 'ASP.NET', 'C#', 'CSS'],
       color: 'bg-green-400',
       borderColor: 'border-green-600',
-      images: ['/images/certificates/fundamental-web.png'],
+      images: ['/images/certificates/fundamental_web_programming.png', '/images/certificates/fundamental_web_programming2.png'],
     },
   ];
 
