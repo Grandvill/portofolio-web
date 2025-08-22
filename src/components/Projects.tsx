@@ -79,22 +79,22 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div key={project.title} className={`group ${project.teamProject ? 'md:col-span-2' : ''}`} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 * index }}>
+            <motion.div key={project.title} className="group" initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 * index }}>
               <div className="bg-white dark:bg-gray-800 border-4 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-2 hover:translate-y-2 transition-all duration-300">
                 {/* Project Image */}
-                <div className="relative overflow-hidden border-b-4 border-black">
+                <div className="relative overflow-hidden border-b-4 border-black h-48 sm:h-56 md:h-64">
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 * index }}
                   />
 
                   {/* Project Type Badge */}
-                  <div className="absolute top-2 left-2">
-                    <motion.div className="bg-black text-white px-2 py-1 border-2 border-white shadow-brutal font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
+                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                    <motion.div className="bg-black text-white px-2 py-1 sm:px-3 sm:py-1 border-2 border-white shadow-brutal font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
                       WEB APP
                     </motion.div>
                   </div>
@@ -104,8 +104,8 @@ export default function Projects() {
                 <div className={`${project.color} p-6 border-b-4 border-black`}>
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-2xl font-black text-black mb-2">{project.title}</h3>
-                      {project.teamProject && (
+                      <h3 className="text-xl sm:text-2xl font-black text-black mb-2 leading-tight">{project.title}</h3>
+                      {project.id === 'sikembar' && (
                         <motion.span className="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
                           TEAM PROJECT
                         </motion.span>
@@ -115,14 +115,14 @@ export default function Projects() {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                <div className="p-4 sm:p-6">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">{project.description}</p>
 
                   {/* Tech Stack */}
-                  <div className="mb-6">
+                  <div className="mb-4 sm:mb-6">
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-mono text-sm font-bold border-2 border-black dark:border-white">
+                        <span key={tech} className="px-2 py-1 sm:px-3 sm:py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-mono text-xs sm:text-sm font-bold border-2 border-black dark:border-white">
                           {tech}
                         </span>
                       ))}
@@ -130,34 +130,36 @@ export default function Projects() {
                   </div>
 
                   {/* Project Links */}
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       <Link
                         to={`/project/${project.id}`}
-                        className="flex items-center gap-2 px-4 py-2 bg-accent-500 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                        className="flex items-center justify-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-accent-500 text-white font-mono text-xs sm:text-sm font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                       >
                         <ExternalLink size={16} />
                         View Details
                       </Link>
                     </motion.div>
 
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white font-mono font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </motion.a>
+                    {project.liveUrl && (
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-primary-500 text-white font-mono text-xs sm:text-sm font-bold border-2 border-black shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </motion.a>
+                    )}
 
                     <motion.a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 text-black dark:text-white font-mono font-bold border-2 border-black dark:border-white shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                      className="flex items-center justify-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-white dark:bg-gray-700 text-black dark:text-white font-mono text-xs sm:text-sm font-bold border-2 border-black dark:border-white shadow-brutal hover:shadow-brutal-lg hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -177,7 +179,7 @@ export default function Projects() {
             href="https://github.com/Grandvill"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-500 text-white font-mono font-bold text-lg border-4 border-black shadow-brutal-xl hover:shadow-brutal-lg hover:translate-x-2 hover:translate-y-2 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-accent-500 text-white font-mono font-bold text-base sm:text-lg border-4 border-black shadow-brutal-xl hover:shadow-brutal-lg hover:translate-x-2 hover:translate-y-2 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
