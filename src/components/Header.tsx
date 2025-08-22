@@ -34,25 +34,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div className="font-mono text-xl font-black" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <span className="text-primary-500">Z</span>
-            <span className="text-accent-500">A</span>
-            <span className="text-neon-500">H</span>
-            <span className="text-primary-500">I</span>
-            <span className="text-accent-500">D</span>
-            <span className="text-neon-500">A</span>
-            <span className="text-primary-500 mr-2">N</span>
-
-            <span className="text-accent-500">A</span>
-            <span className="text-neon-500">R</span>
-            <span className="text-primary-500">D</span>
-            <span className="text-accent-500">H</span>
-            <span className="text-neon-500">I</span>
-            <span className="text-primary-500">A</span>
-            <span className="text-accent-500">N</span>
-            <span className="text-neon-500">S</span>
-            <span className="text-primary-500">Y</span>
-            <span className="text-accent-500">A</span>
-            <span className="text-neon-500">H</span>
+            <span className="text-accent-400">ZAHIDAN ARDHIANSYAH</span>
           </motion.div>
 
           {/* Desktop Navigation */}
