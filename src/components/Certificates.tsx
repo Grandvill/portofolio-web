@@ -41,7 +41,7 @@ export default function Certificates() {
       skills: ['GoLang', 'Concurrency', 'Data Structures', 'Backend Development'],
       color: 'bg-neon-400',
       borderColor: 'border-neon-600',
-      images: ['images/certificates/golang_intermediate.png'],
+      images: ['images/certificates/golang_intermediate.png', 'images/certificates/golang_intermediate2.png'],
     },
     {
       title: 'Sertifikat Keikutsertaan MSIB Batch 6',
@@ -51,7 +51,7 @@ export default function Certificates() {
       skills: ['Internship Experience', 'Industry Collaboration', 'Professional Development'],
       color: 'bg-blue-400',
       borderColor: 'border-blue-600',
-      images: ['images/certificates/kampus_merdeka.png'],
+      images: ['images/certificates/sertifikat_msib.png'],
     },
     {
       title: 'Magang Merdeka Batch 6 Bisnis Indonesia Group',
@@ -75,8 +75,8 @@ export default function Certificates() {
       images: ['/images/certificates/basic-web-design.png'],
     },
     {
-      title: 'Software Engineering Fundamental Course (SEFC23)',
-      issuer: 'Universitas Gunadarma',
+      title: 'Software Engineering Fundamental Course',
+      issuer: 'RevoU',
       date: 'November 2023',
       description:
         'Attended the Software Engineering Fundamental Course (SEFC23), covering essential concepts in software engineering including software development lifecycle (SDLC), requirements analysis, system design, testing, and project management fundamentals. Learned the principles of structured and object-oriented development methodologies.',
