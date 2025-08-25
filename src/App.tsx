@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -72,7 +73,6 @@ function App() {
 
             <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
               <Routes>
-                {/* Home page */}
                 <Route
                   path="/"
                   element={
@@ -90,6 +90,35 @@ function App() {
                 {/* Dynamic project detail page */}
                 <Route path="/project/:id" element={<ProjectDetail />} />
               </Routes>
+              <Toaster
+                position="top-center"
+                gutter={12}
+                containerStyle={{ margin: '8px' }}
+                toastOptions={{
+                  success: {
+                    duration: 4000,
+                    style: {
+                      fontSize: '16px',
+                      maxWidth: '500px',
+                      padding: '16px 24px',
+                      backgroundColor: 'color-green-600',
+                      color: 'color-grey-400',
+                      fontWeight: '500',
+                    },
+                  },
+                  error: {
+                    duration: 5000,
+                    style: {
+                      fontSize: '16px',
+                      maxWidth: '500px',
+                      padding: '16px 24px',
+                      backgroundColor: 'color-red-600',
+                      color: 'color-grey-400',
+                      fontWeight: '500',
+                    },
+                  },
+                }}
+              />
             </motion.main>
 
             <Footer />
