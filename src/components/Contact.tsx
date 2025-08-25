@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import emailjs from 'emailjs-com';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -21,12 +23,33 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+    const userID = import.meta.env.VITE_EMAILJS_USER_ID || '';
 
-    alert('Message sent! Thanks for reaching out! 🚀');
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
+    if (!serviceID || !templateID || !userID) {
+      toast.error('EmailJS configuration is missing');
+      setIsSubmitting(false);
+      return;
+    }
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      to_email: 'zahidan23@gmail.com',
+    };
+
+    try {
+      await emailjs.send(serviceID, templateID, templateParams, userID);
+      toast.success('Message sent successfully 🚀');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast.error('Failed to send message ❌');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
