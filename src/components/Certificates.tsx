@@ -16,7 +16,8 @@ export default function Certificates() {
       title: 'The Ultimate React Course 2025: React, Next.js, Redux & More',
       issuer: 'Udemy',
       date: 'July 2025',
-      description: 'Learned the fundamentals of React, Next.js, and Redux. Built a portfolio website using React and Next.js using supabase and deployed it on Vercel and Netify.',
+      description:
+        'Completed a comprehensive course covering modern React development, including Next.js, Redux Toolkit, React Query, and advanced design patterns. Gained hands-on experience by building 10+ projects with real-world features such as authentication, data filtering, pagination, and performance optimization.',
       skills: ['JavaScript', 'React.js', 'Next.js', 'Redux', 'React Query', 'Supabase', 'Vercel', 'Tailwind CSS'],
       color: 'bg-accent-400',
       borderColor: 'border-accent-600',
