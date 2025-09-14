@@ -24,6 +24,16 @@ export default function Skills() {
       color: 'bg-blue-500',
     },
     {
+      name: 'Vue.js',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vuejs/vuejs-original.svg',
+      color: 'bg-green-800',
+    },
+    {
+      name: 'Nuxt.js',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg',
+      color: 'bg-gray-800',
+    },
+    {
       name: 'Node js',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
       color: 'bg-green-500',
