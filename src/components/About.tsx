@@ -104,6 +104,20 @@ export default function About() {
             <div className="space-y-8">
               {[
                 {
+                  period: 'October 2025 - Present',
+                  title: 'Fullstack Web Developer (Contract)',
+                  company: 'BPJS Kesehatan - Central Jakarta',
+                  // program: 'Program Kompetisi Kampus Merdeka (PKKM)',
+                  description: 'Developed and enhanced multiple modules in national healthcare systems to support primary healthcare service operations and claim management using .NET Framework, TypeScript, and SQL Server Database.',
+                  points: [
+                    'Implemented business logic, validation rules, and improved data input and validation mechanisms to automate eligibility checks, enhance claim processing efficiency, and improve healthcare data accuracy across facilities in Indonesia.',
+                    'Collaborated with cross-functional teams to analyze requirements, implement system improvements, and ensure system reliability in production environments.',
+                    'Migrated a legacy healthcare application from .NET Framework 4 to a modern architecture using Angular and .NET 10, improving system maintainability and scalability.',
+                    'Manage source code and collaboration workflows using Bitbucket and Gitlab, ensuring consistent version control and streamlined code reviews processes.',
+                  ],
+                  color: 'bg-primary-400',
+                },
+                {
                   period: 'Oct - Dec 2024',
                   title: 'Web Developer (Internship)',
                   company: 'BPBD Cianjur x UG Techno Park',
