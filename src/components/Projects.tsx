@@ -51,6 +51,7 @@ export default function Projects() {
       tech: ['CodeIgniter', 'Bootstrap', 'MySQL', 'PHP'],
       githubUrl: 'https://github.com/isramrasal/bpbd_sikembar',
       color: 'bg-red-400',
+      teamProject: true,
       image: 'images/projects/sikembar.png',
       id: 'sikembar',
     },
@@ -61,6 +62,7 @@ export default function Projects() {
       tech: ['Next.js', 'Node.js', 'Express.js', 'JavaScript', 'Tailwind CSS', 'PostgreSQL'],
       githubUrl: 'https://github.com/Grandvill/big-forum-3.0',
       color: 'bg-yellow-400',
+      teamProject: true,
       image: 'images/projects/loginbigforum.jpg',
       id: 'bigforum',
     },
@@ -105,7 +107,7 @@ export default function Projects() {
                   <div className="flex items-start justify-between">
                     <div>
                       <h3 className="text-xl sm:text-2xl font-black text-black mb-2 leading-tight">{project.title}</h3>
-                      {project.id === 'sikembar' && (
+                      {project.teamProject === true && (
                         <motion.span className="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 2, repeat: Infinity }}>
                           TEAM PROJECT
                         </motion.span>
